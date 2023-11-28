@@ -71,14 +71,14 @@ const useCandyMachine = (umi: Umi, candyMachineId: string, checkEligibility: boo
           candyGuard = await safeFetchCandyGuard(umi, candyMachine.mintAuthority);
         } catch (e) {
           console.error(e);
-          toast({
-            id: "no-guard-found",
-            title: "No Candy Guard found!",
-            description: "Do you have one assigned?",
-            status: "error",
-            duration: 999999,
-            isClosable: true,
-          });
+          // toast({
+          //   id: "no-guard-found",
+          //   title: "No Candy Guard found!",
+          //   description: "Do you have one assigned?",
+          //   status: "error",
+          //   duration: 999999,
+          //   isClosable: true,
+          // });
         }
         if (!candyGuard) {
           return;
